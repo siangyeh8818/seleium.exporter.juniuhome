@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: juniuhome-exporter
+spec:
+  replicas: 1
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: hema-im-exporter
+    spec:
+      containers:
+      - name: hema-im-exporter
+        image: siangyeh8818/juniuhome-exporter:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
+          protocol: TCP
+        env:
+        - name: JUNIUHOME_ACCOUNT
+          value: "INPUT YOUR ID"
+        - name: JUNIUHOME_PASSWORD
+          value: "INPUT YOUR KEY"
+        - name: SELEIUM_INTERNAL_TIME
+          value: "180m"
