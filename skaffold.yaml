@@ -5,4 +5,4 @@ build:
   - image: siangyeh8818/juniuhome-exporter
     context: .
     docker:
-      dockerfile: build/hema-im/Dockerfile
+      dockerfile: build/Dockerfile

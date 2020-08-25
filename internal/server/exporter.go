@@ -23,13 +23,13 @@ type Exporter struct {
 
 func Run_Exporter_Server() {
 	log.Println(`
-  This is a prometheus exporter for hema.im
+  This is a prometheus exporter for juniuhome
   Access: http://127.0.0.1:8081
   `)
 
 	metricsPath := "/metrics"
 	listenAddress := ":8081"
-	metricsPrefix := "hema_im"
+	metricsPrefix := "juniuhome"
 	exporters := NewExporter(metricsPrefix)
 	/*
 	   	registry := prometheus.NewRegistry()

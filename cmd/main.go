@@ -10,11 +10,11 @@ import (
 
 func main() {
 	log.Println("Exporter is start ro running")
-	account_email := os.Getenv("ACCOUNT_EMAIL")
-	log.Printf("ACCOUNT_EMAIL : %s \n", account_email)
+	account_email := os.Getenv("JUNIUHOME_ACCOUNT")
+	log.Printf("JUNIUHOME_ACCOUNT : %s \n", account_email)
 
-	account_password := os.Getenv("ACCOUNT_PASSWORD")
-	log.Printf("ACCOUNT_PASSWORD : %s \n", account_password)
+	account_password := os.Getenv("JUNIUHOME_PASSWORD")
+	log.Printf("JUNIUHOME_PASSWORD : %s \n", account_password)
 
 	interval_time := os.Getenv("SELEIUM_INTERNAL_TIME")
 	log.Printf("SELEIUM_INTERNAL_TIME : %s \n", interval_time)

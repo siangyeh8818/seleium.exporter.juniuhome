@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hema-im-exporter
-        image: siangyeh8818/juniuhome-exporter:1.0
+        image: siangyeh8818/juniuhome-exporter:1.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8081
